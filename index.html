@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Iframe Switcher</title>
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: sans-serif;
+        }
+
+        iframe {
+            flex: 1;
+            width: 100%;
+            border: none;
+        }
+
+        .bottom-bar {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: #111;
+        }
+
+        button {
+            padding: 10px 22px;
+            border: none;
+            border-radius: 6px;
+            background: #3b82f6;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2563eb;
+        }
+    </style>
+</head>
+
+<body>
+    <iframe id="viewer" src="mipp18.html"></iframe>
+
+    <div class="bottom-bar">
+        <button id="goBtn">Google Form Submission</button>
+        <button id="backBtn" style="display:none;">Back</button>
+    </div>
+
+    <script>
+        const iframe = document.getElementById("viewer");
+        const goBtn = document.getElementById("goBtn");
+        const backBtn = document.getElementById("backBtn");
+
+        const homePage = "mipp18.html";
+        const otherPage = "https://forms.gle/ikgDQ19mER8CU9KAA";
+
+        goBtn.onclick = () => {
+            iframe.src = otherPage;
+            goBtn.style.display = "none";
+            backBtn.style.display = "inline-block";
+        };
+
+        backBtn.onclick = () => {
+            iframe.src = homePage;
+            backBtn.style.display = "none";
+            goBtn.style.display = "inline-block";
+        };
+    </script>
+</body>
+</html>
