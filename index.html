@@ -10,6 +10,7 @@
             padding: 0;
             height: 100%;
             overflow: hidden;
+            background: black;
         }
 
         body {
@@ -22,29 +23,40 @@
             flex: 1;
             width: 100%;
             border: none;
+            background: black;
         }
 
         .bottom-bar {
-            height: 60px;
+            height: 80px;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            background: #111;
+            background: black;
+        }
+
+        /* Color bounce animation */
+        @keyframes blueBounce {
+            0%   { background-color: #0240FA; }
+            50%  { background-color: #027AFA; }
+            100% { background-color: #0240FA; }
         }
 
         button {
-            padding: 10px 22px;
+            flex: 1;
             border: none;
-            border-radius: 6px;
-            background: #3b82f6;
             color: white;
-            font-size: 14px;
+            font-size: 18px;
+            font-weight: bold;
             cursor: pointer;
+
+            animation: blueBounce 4s ease-in-out infinite;
+            transition: transform 0.2s ease;
         }
 
         button:hover {
-            background: #2563eb;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.98);
         }
     </style>
 </head>
@@ -53,8 +65,8 @@
     <iframe id="viewer" src="mipp18.html"></iframe>
 
     <div class="bottom-bar">
-        <button id="goBtn">Google Form Submission</button>
-        <button id="backBtn" style="display:none;">Back</button>
+        <button id="goBtn">Google Forms</button>
+        <button id="backBtn" style="display:none;">BACK</button>
     </div>
 
     <script>
@@ -68,13 +80,13 @@
         goBtn.onclick = () => {
             iframe.src = otherPage;
             goBtn.style.display = "none";
-            backBtn.style.display = "inline-block";
+            backBtn.style.display = "block";
         };
 
         backBtn.onclick = () => {
             iframe.src = homePage;
             backBtn.style.display = "none";
-            goBtn.style.display = "inline-block";
+            goBtn.style.display = "block";
         };
     </script>
 </body>
