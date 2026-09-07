@@ -1,3 +1,0 @@
--add auditory reaction time test
--fix double click bug
--add total screen time
