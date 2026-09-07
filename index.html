@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>grade calculator</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <label for="g1">Portion 1:</label>
+        <input type="number" id="p1" name="p1" min="0" max="100" step="1" size="width:40px" value="100">
+        <label for="p1">%<br>Grade 1:</label>
+        <select name="g1" id="g1">
+            <option value="7">A+</option>
+            <option value="6">A</option>
+            <option value="5">B+</option>
+            <option value="4">B</option>
+            <option value="3">C</option>
+            <option value="2">D</option>
+            <option value="1">F</option>
+        </select>
+        <br><br>
+        <label for="g2">Portion 2:</label>
+        <input type="number" id="p2" name="p2" min="0" max="100" step="1" size="width:40px" value="0">
+        <label for="p2">%<br>Grade 2:</label>
+        <select name="g2" id="g2">
+            <option value="7">A+</option>
+            <option value="6">A</option>
+            <option value="5">B+</option>
+            <option value="4">B</option>
+            <option value="3">C</option>
+            <option value="2">D</option>
+            <option value="1">F</option>
+        </select>
+        <br><br>
+        <label for="g3">Portion 3:</label>
+        <input type="number" id="p3" name="p3" min="0" max="100" step="1" size="width:40px" value="0">
+        <label for="p3">%<br>Grade 3:</label>
+        <select name="g3" id="g3">
+            <option value="7">A+</option>
+            <option value="6">A</option>
+            <option value="5">B+</option>
+            <option value="4">B</option>
+            <option value="3">C</option>
+            <option value="2">D</option>
+            <option value="1">F</option>
+        </select>
+        <br><br>
+        <label for="g4">Portion 4:</label>
+        <input type="number" id="p4" name="p4" min="0" max="100" step="1" size="width:40px" value="0">
+        <label for="p4">%<br>Grade 4:</label>
+        <select name="g4" id="g4">
+            <option value="7">A+</option>
+            <option value="6">A</option>
+            <option value="5">B+</option>
+            <option value="4">B</option>
+            <option value="3">C</option>
+            <option value="2">D</option>
+            <option value="1">F</option>
+        </select>
+        <br><br>
+        <label for="g5">Portion 5:</label>
+        <input type="number" id="p5" name="p5" min="0" max="100" step="1" size="width:40px" value="0">
+        <label for="p5">%<br>Grade 5:</label>
+        <select name="g5" id="g5">
+            <option value="7">A+</option>
+            <option value="6">A</option>
+            <option value="5">B+</option>
+            <option value="4">B</option>
+            <option value="3">C</option>
+            <option value="2">D</option>
+            <option value="1">F</option>
+        </select>
+        <br><br>
+        <br>
+        <button onclick="calculate();" type="button">Calculate Grade</button>
+        <p id="out"></p>
+        <script src="script.js"></script>
+    </body>
+</html>
